@@ -1,4 +1,5 @@
 import React from 'react';
+import './Imagelist.css'
 
 class Imagecard extends React.Component {
     constructor(props) {
@@ -24,7 +25,11 @@ class Imagecard extends React.Component {
     
     render() {
         
-        return <div style={{gridRowEnd: ` span ${this.state.span}`}}><img alt={this.props.image.description}  src={this.props.image.urls.regular} ref={this.imageref}/></div>
+        return (
+            <div style={{gridRowEnd: ` span ${this.state.span}`}} className='image_container'>
+                <img alt={this.props.image.description}  src={this.props.image.urls.regular} ref={this.imageref}/>
+            </div>
+            )
     }
 }
 export default Imagecard;
